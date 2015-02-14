@@ -33,3 +33,11 @@ $curl->post("http://site.com/wp-comments-post.php", $arrayName);
 ```php
 $curl->download("http://site.com/image.jpeg", "images/image.jpeg");
 ```
+
+# Preg
+```php
+$val = $curl->get("http://site.com/");
+//Example Value: <p>Content</p>
+echo $curl->preg("<p>", "</p>", $val);
+//Content
+```
